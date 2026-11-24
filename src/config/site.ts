@@ -56,7 +56,9 @@ export const siteConfig = {
     }`,
   },
   analytics: {
-    gaMeasurementId: process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID?.trim() || "",
+    // GA4 measurement IDs are public; env var overrides the default.
+    gaMeasurementId:
+      process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID?.trim() || "G-RJFKP2ZXNX",
   },
   ctas: {
     primary: "Discuss Your Project on WhatsApp",
