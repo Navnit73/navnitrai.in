@@ -39,6 +39,19 @@ interface FormValues {
   website_url: string; // honeypot
 }
 
+function validate(v: FormValues): string | null {
+  if (v.name.trim().length < 2) return "Please enter your name (at least 2 characters).";
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.email.trim()))
+    return "Please enter a valid email address.";
+  const digits = v.phone.replace(/\D/g, "");
+  if (digits.length < 7 || digits.length > 15)
+    return "Please enter a valid phone or WhatsApp number.";
+  if (v.description.trim().length < 15)
+    return "Please describe your project in at least 15 characters.";
+  if (v.description.length > 3000) return "Description must be under 3000 characters.";
+  return null;
+}
+
 export function ContactForm({
   defaultProjectType = "",
   sourceContext = "contact_page",
@@ -67,6 +80,18 @@ export function ContactForm({
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setErrorMsg(null);
+
+    // Static site: validation and spam checks run in the browser.
+    const validationError = validate(values);
+    if (validationError) {
+      setErrorMsg(validationError);
+      return;
+    }
+    // Bots fill the hidden honeypot field or submit instantly — pretend success.
+    const isBot =
+      values.website_url.trim().length > 0 ||
+      (loadedAtRef.current > 0 && Date.now() - loadedAtRef.current < 1200);
+
     setSubmitting(true);
 
     trackConversion("contact_form_submit", {
@@ -74,34 +99,10 @@ export function ContactForm({
       service: values.projectType,
     });
 
+    const referenceId = `NR-${Date.now().toString(36).toUpperCase().slice(-6)}`;
+
     try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          ...values,
-          formLoadedAt: loadedAtRef.current,
-          sourcePage: window.location.pathname,
-        }),
-      });
-
-      const data = (await response.json()) as {
-        ok?: boolean;
-        referenceId?: string;
-        error?: string;
-      };
-
-      if (!response.ok || !data.ok) {
-        setErrorMsg(
-          data.error ||
-            "Unable to submit right now. Please message directly on WhatsApp."
-        );
-        return;
-      }
-
-      // Honeypot hits are silently accepted by the API — don't email them.
-      if (data.referenceId !== "ACCEPTED") {
-        const referenceId = data.referenceId || "NEW";
+      if (!isBot) {
         const mailResponse = await fetch(siteConfig.forms.formSubmitEndpoint, {
           method: "POST",
           headers: {
@@ -140,7 +141,7 @@ export function ContactForm({
         service: values.projectType,
       });
 
-      setSubmittedRef(data.referenceId || "SUBMITTED");
+      setSubmittedRef(referenceId);
     } catch {
       setErrorMsg(
         "Network error while sending your enquiry. Please try again or reach out on WhatsApp."

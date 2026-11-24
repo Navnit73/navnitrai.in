@@ -279,3 +279,111 @@ export const caseStudiesData: CaseStudyItem[] = [
 export function getCaseStudyBySlug(slug: string): CaseStudyItem | undefined {
   return caseStudiesData.find((c) => c.slug === slug);
 }
+
+/* ------------------------------------------------------------------ */
+/* Live products — real websites I designed, built and run             */
+/* ------------------------------------------------------------------ */
+
+export interface LiveProject {
+  name: string;
+  url: string;
+  domain: string;
+  category: string;
+  market: string;
+  summary: string;
+  highlights: string[];
+  stack: string[];
+}
+
+export const liveProjects: LiveProject[] = [
+  {
+    name: "Passport Photo Checker",
+    url: "https://passport-photo-checker.com/",
+    domain: "passport-photo-checker.com",
+    category: "Web App",
+    market: "Worldwide",
+    summary:
+      "Upload a photo and instantly see if it meets passport, visa and ID rules for 50+ countries — then download a correctly sized photo.",
+    highlights: [
+      "In-browser face detection checks the photo automatically",
+      "Country-specific size and background rules",
+      "Print-ready PDF sheets",
+    ],
+    stack: ["Next.js", "MediaPipe AI", "MongoDB", "Cloudinary"],
+  },
+  {
+    name: "PixPassport UK",
+    url: "https://pixpassport.uk/",
+    domain: "pixpassport.uk",
+    category: "E-Commerce",
+    market: "United Kingdom",
+    summary:
+      "Make a UK passport photo online for GOV.UK applications. Upload a phone photo, check it against HMPO guidance and pay to download.",
+    highlights: [
+      "Paid downloads with online checkout",
+      "Automatic photo checks against official UK guidance",
+      "Order emails and digital delivery",
+    ],
+    stack: ["Next.js", "MediaPipe AI", "Razorpay", "MongoDB"],
+  },
+  {
+    name: "idphoto.us",
+    url: "https://idphoto.us/",
+    domain: "idphoto.us",
+    category: "E-Commerce",
+    market: "United States",
+    summary:
+      "Passport and ID photo maker for the U.S. and 60+ countries, with a free preview, pay-once download and plain-English guides.",
+    highlights: [
+      "Free preview, pay once to download",
+      "Guides content built for Google search",
+      "Automated email delivery",
+    ],
+    stack: ["Next.js", "MediaPipe AI", "Razorpay", "MongoDB"],
+  },
+  {
+    name: "EasyFormsPDF",
+    url: "https://easyformspdf.com/",
+    domain: "easyformspdf.com",
+    category: "Web App",
+    market: "US & UK",
+    summary:
+      "Fill and sign official IRS forms (W-9, W-4, W-8BEN, 1099-NEC) and UK legal templates free in the browser — files never leave the user's device.",
+    highlights: [
+      "PDF filling and signing fully in the browser",
+      "Privacy-first: no file uploads to a server",
+      "Fast static pages for each form",
+    ],
+    stack: ["Next.js", "pdf-lib", "PDF.js", "TypeScript"],
+  },
+  {
+    name: "MyMacStorage",
+    url: "https://mymacstorage.com/",
+    domain: "mymacstorage.com",
+    category: "SaaS / Product Site",
+    market: "Worldwide",
+    summary:
+      "Website and checkout for a Mac app that frees up storage — finds caches, duplicates and app leftovers safely in one scan.",
+    highlights: [
+      "Product landing page that sells a paid app",
+      "Online payments and licence delivery",
+      "Built to rank for “Mac storage full” searches",
+    ],
+    stack: ["Next.js", "Dodo Payments", "MongoDB"],
+  },
+  {
+    name: "PrintSheet Template",
+    url: "https://printsheet-template.com/",
+    domain: "printsheet-template.com",
+    category: "Web App",
+    market: "Worldwide",
+    summary:
+      "Free online maker for photo sheets, business cards, labels, stickers and jar & bottle labels — design and print from the browser.",
+    highlights: [
+      "Ready templates for cards, labels and stickers",
+      "QR code and barcode generation",
+      "Print-ready PDF export",
+    ],
+    stack: ["Next.js", "jsPDF", "PayPal", "QR / Barcode"],
+  },
+];

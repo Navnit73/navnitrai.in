@@ -1,17 +1,17 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Info } from "lucide-react";
 import { buildPageMetadata } from "@/lib/seo";
-import { portfolioItems } from "@/data/projects";
+import { liveProjects, portfolioItems } from "@/data/projects";
+import { LiveProjectsGrid } from "@/components/portfolio/LiveProjects";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { Badge } from "@/components/ui/badge";
 import { PortfolioGrid } from "@/components/portfolio/PortfolioGrid";
 import { CtaBanner } from "@/components/cta/CtaBanner";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Web Development Portfolio & Reference Builds | Navnit Rai",
+  title: "Portfolio: Live Websites & Web Apps | Navnit Rai",
   description:
-    "Inspect technical reference builds and frontend/full-stack web architectures engineered with Next.js, TypeScript, and Tailwind CSS.",
+    "Live websites and web apps built by Navnit Rai — passport photo tools, PDF form filler, Mac app store page and print templates with online payments, AI checks and fast Next.js pages.",
   path: "/portfolio",
   keywords: [
     "freelance web developer portfolio india",
@@ -32,27 +32,38 @@ export default function PortfolioPage() {
             ]}
           />
 
-          <Badge variant="amber">Technical Architectures</Badge>
+          <Badge variant="amber">Portfolio</Badge>
           <h1 className="mt-4 text-3xl font-extrabold tracking-tight text-[#0A0A0A] sm:text-5xl">
-            Selected Builds &amp; Reference Architectures
+            Live Websites &amp; Web Apps I&apos;ve Built
           </h1>
           <p className="mt-4 max-w-2xl text-lg leading-relaxed text-neutral-700">
-            Architectural blueprints demonstrating how business websites, B2B RFQ catalogs, e-commerce storefronts, and custom web apps are engineered for speed, SEO, and conversions.
+            Real products running today, used by customers in the UK, the US and worldwide — plus concept builds showing how I&apos;d approach common business websites.
           </p>
+        </div>
+      </section>
 
-          <div className="mt-6 flex items-start gap-3 border border-[#0A0A0A] bg-[#FEF3C7] p-4 text-sm text-[#0A0A0A]">
-            <Info aria-hidden="true" className="mt-0.5 h-5 w-5 shrink-0 text-[#92400E]" />
-            <p>
-              <strong>Transparency Notice:</strong> These entries showcase technical reference architectures ready to customize in{" "}
-              <code className="font-mono font-semibold">src/data/projects.ts</code>{" "}
-              with live client URLs and verified outcomes—no fabricated client metrics or testimonials are displayed.
-            </p>
+      <section className="border-b border-neutral-300 bg-white">
+        <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold tracking-tight text-[#0A0A0A] sm:text-3xl">
+            Live projects
+          </h2>
+          <p className="mt-2 max-w-2xl text-base text-neutral-700">
+            Open any of them and try it yourself.
+          </p>
+          <div className="mt-8">
+            <LiveProjectsGrid projects={liveProjects} />
           </div>
         </div>
       </section>
 
       <section className="bg-neutral-50">
         <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold tracking-tight text-[#0A0A0A] sm:text-3xl">
+            Concept builds
+          </h2>
+          <p className="mt-2 mb-8 max-w-2xl text-base text-neutral-700">
+            Sample plans for common business needs — manufacturers, online stores and clinics.
+          </p>
           <PortfolioGrid items={portfolioItems} />
 
           <div className="mt-12 border border-[#0A0A0A] bg-white p-6">

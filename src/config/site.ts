@@ -5,7 +5,7 @@ const phoneDisplay =
 const phoneRaw =
   process.env.NEXT_PUBLIC_PHONE_RAW?.trim() || "+919129740113";
 const whatsappNumber =
-  process.env.NEXT_PUBLIC_WHATSAPP_NUMBER?.trim() || "919129740113";
+  process.env.NEXT_PUBLIC_WHATSAPP_NUMBER?.trim() || "917355087072";
 const contactEmail =
   process.env.NEXT_PUBLIC_CONTACT_EMAIL?.trim() || "navnitrai5389@gmail.com";
 

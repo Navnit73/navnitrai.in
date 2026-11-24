@@ -15,7 +15,8 @@ import { siteConfig } from "@/config/site";
 import { buildPageMetadata } from "@/lib/seo";
 import { getTelUrl, getWhatsAppUrl } from "@/lib/utils";
 import { locationsData } from "@/data/locations";
-import { portfolioItems } from "@/data/projects";
+import { liveProjects, portfolioItems } from "@/data/projects";
+import { LiveProjectsGrid } from "@/components/portfolio/LiveProjects";
 import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
 import { Accordion } from "@/components/ui/accordion";
@@ -249,6 +250,13 @@ export default function HomePage() {
               <p className="mt-4 text-sm text-neutral-600">
                 Free first chat · No obligation · {siteConfig.contact.responseWindow.toLowerCase()}
               </p>
+              <a
+                href="#live-projects"
+                className="mt-3 inline-flex items-center gap-1.5 text-sm font-bold text-[#0A0A0A] underline decoration-[#F59E0B] decoration-2 underline-offset-4 hover:text-[#B45309]"
+              >
+                <span className="h-2 w-2 rounded-full bg-green-600" aria-hidden="true" />
+                See {liveProjects.length} live websites I&apos;ve built
+              </a>
             </div>
 
             {/* What you get — at a glance */}
@@ -490,19 +498,41 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 5. Sample projects */}
+      {/* 5. Live projects */}
+      <section id="live-projects" className="scroll-mt-20 border-b border-neutral-300 bg-neutral-50">
+        <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+          <div className="max-w-2xl">
+            <p className="text-sm font-bold uppercase tracking-wider text-[#B45309]">
+              Live projects
+            </p>
+            <h2 className="mt-2 text-3xl font-bold tracking-tight text-[#0A0A0A]">
+              Real websites I&apos;ve built — open them and try
+            </h2>
+            <p className="mt-3 text-base text-neutral-700">
+              These are live products used by real customers in the UK, the
+              US and worldwide — with online payments, AI photo checks and PDF tools.
+            </p>
+          </div>
+          <div className="mt-10">
+            <LiveProjectsGrid projects={liveProjects} />
+          </div>
+        </div>
+      </section>
+
+      {/* 6. Sample builds */}
       <section className="border-b border-neutral-300 bg-white">
         <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
           <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
             <div className="max-w-2xl">
               <p className="text-sm font-bold uppercase tracking-wider text-[#B45309]">
-                Sample projects
+                Concept builds
               </p>
               <h2 className="mt-2 text-3xl font-bold tracking-tight text-[#0A0A0A]">
-                Examples of what I can build
+                Ideas for businesses like yours
               </h2>
               <p className="mt-3 text-base text-neutral-700">
-                Sample builds showing how I&apos;d solve common business problems.
+                Sample plans showing how I&apos;d solve common problems for
+                manufacturers, online stores and clinics.
               </p>
             </div>
             <Link
@@ -542,7 +572,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 6. Cities */}
+      {/* 7. Cities */}
       <section className="border-b border-neutral-300 bg-neutral-50">
         <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
           <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
@@ -571,7 +601,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 7. FAQs */}
+      {/* 8. FAQs */}
       <section className="bg-white">
         <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
           <div className="mb-8 text-center">
@@ -605,7 +635,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 8. Final CTA */}
+      {/* 9. Final CTA */}
       <CtaBanner
         source="home_bottom"
         heading="Let's get your business more customers online"

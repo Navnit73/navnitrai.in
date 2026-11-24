@@ -6,6 +6,8 @@ import { localServicePages } from "@/data/local-services";
 import { blogPostsData } from "@/data/blog";
 import { caseStudiesData } from "@/data/projects";
 
+export const dynamic = "force-static";
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = siteConfig.url;
 
