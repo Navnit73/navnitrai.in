@@ -23,6 +23,7 @@ import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
 import { Accordion } from "@/components/ui/accordion";
 import { CtaBanner } from "@/components/cta/CtaBanner";
+import { CityServiceLinks } from "@/components/locations/CityServiceLinks";
 import {
   TrackedExternalLink,
   TrackedRouteLink,
@@ -36,13 +37,15 @@ export const metadata: Metadata = buildPageMetadata({
   path: "/locations/gorakhpur",
   keywords: [
     "website developer in gorakhpur",
-    "freelance web developer in gorakhpur",
+    "web designer in gorakhpur",
     "web development company in gorakhpur",
+    "website design company in gorakhpur",
+    "best website development company in gorakhpur",
     "gorakhpur website designer",
-    "gorakhpur ecommerce website developer",
-    "gorakhpur website hosting services",
-    "gorakhpur website maintenance",
-    "gorakhpur next js developer",
+    "gorakhpur website development company",
+    "gorakhpur business website developer",
+    "gorakhpur landing page developer",
+    "gorakhpur website seo services",
   ],
 });
 
@@ -223,14 +226,8 @@ export default function GorakhpurLocationPage() {
               <strong>Gorakhpur web application developer</strong>, <strong>Gorakhpur custom software developer</strong>, and <strong>Gorakhpur SaaS developer</strong>.
             </p>
             <div className="mt-4 flex flex-wrap gap-3 text-sm font-bold">
-              <Link href="/services/web-application-development" className="underline hover:text-[#B45309]">
-                Web Application Scope →
-              </Link>
-              <Link href="/services/full-stack-development" className="underline hover:text-[#B45309]">
-                Full-Stack Architecture →
-              </Link>
-              <Link href="/services/nextjs-development" className="underline hover:text-[#B45309]">
-                Next.js Development →
+              <Link href="/locations/gorakhpur/web-application-development" className="underline hover:text-[#B45309]">
+                Web app &amp; custom software development in Gorakhpur →
               </Link>
             </div>
           </article>
@@ -297,6 +294,8 @@ export default function GorakhpurLocationPage() {
           </div>
         </div>
       </section>
+
+      <CityServiceLinks citySlug="gorakhpur" />
 
       {/* Gorakhpur FAQs */}
       <section className="border-b border-neutral-300 bg-white">

@@ -24,6 +24,7 @@ import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
 import { Accordion } from "@/components/ui/accordion";
 import { CtaBanner } from "@/components/cta/CtaBanner";
+import { CityServiceLinks } from "@/components/locations/CityServiceLinks";
 import {
   TrackedExternalLink,
   TrackedRouteLink,
@@ -39,10 +40,11 @@ export const metadata: Metadata = buildPageMetadata({
     "kanpur website developer",
     "website developer in kanpur",
     "web developer in kanpur",
+    "website designer in kanpur",
     "web development company in kanpur",
-    "ecommerce development in kanpur",
-    "kanpur website redesign",
-    "kanpur website maintenance",
+    "best website development company in kanpur",
+    "website design company in kanpur",
+    "kanpur website development company",
     "kanpur business website developer",
   ],
 });
@@ -171,10 +173,10 @@ export default function KanpurLocationPage() {
                 <strong>ecommerce design Kanpur</strong>, I engineer mobile-first storefronts with UPI/Razorpay readiness and GST clarity.
               </p>
               <Link
-                href="/services/ecommerce-website-development"
+                href="/locations/kanpur/ecommerce-website-development"
                 className="mt-4 inline-flex items-center gap-1.5 text-sm font-bold text-[#0A0A0A] hover:text-[#B45309]"
               >
-                <span>Explore E-Commerce Scope</span>
+                <span>E-commerce website development in Kanpur</span>
                 <ArrowRight aria-hidden="true" className="h-4 w-4" />
               </Link>
             </article>
@@ -190,10 +192,10 @@ export default function KanpurLocationPage() {
                 <strong>Kanpur website maintenance</strong> and <strong>Kanpur website management</strong> retainers.
               </p>
               <Link
-                href="/services/website-redesign"
+                href="/locations/kanpur/website-maintenance-and-redesign"
                 className="mt-4 inline-flex items-center gap-1.5 text-sm font-bold text-[#0A0A0A] hover:text-[#B45309]"
               >
-                <span>Explore Redesign Process</span>
+                <span>Website maintenance &amp; redesign in Kanpur</span>
                 <ArrowRight aria-hidden="true" className="h-4 w-4" />
               </Link>
             </article>
@@ -260,6 +262,8 @@ export default function KanpurLocationPage() {
           </div>
         </div>
       </section>
+
+      <CityServiceLinks citySlug="kanpur" />
 
       {/* Kanpur FAQs */}
       <section className="border-b border-neutral-300 bg-white">

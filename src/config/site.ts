@@ -1,13 +1,13 @@
 export const SITE_LAST_MODIFIED = "2026-11-23";
 
 const phoneDisplay =
-  process.env.NEXT_PUBLIC_PHONE_DISPLAY?.trim() || "+91-00000-00000";
+  process.env.NEXT_PUBLIC_PHONE_DISPLAY?.trim() || "+91 91297 40113";
 const phoneRaw =
-  process.env.NEXT_PUBLIC_PHONE_RAW?.trim() || "+910000000000";
+  process.env.NEXT_PUBLIC_PHONE_RAW?.trim() || "+919129740113";
 const whatsappNumber =
-  process.env.NEXT_PUBLIC_WHATSAPP_NUMBER?.trim() || "910000000000";
+  process.env.NEXT_PUBLIC_WHATSAPP_NUMBER?.trim() || "919129740113";
 const contactEmail =
-  process.env.NEXT_PUBLIC_CONTACT_EMAIL?.trim() || "hello@navnitrai.in";
+  process.env.NEXT_PUBLIC_CONTACT_EMAIL?.trim() || "navnitrai5389@gmail.com";
 
 export const siteConfig = {
   brandName: "Navnit Rai",
@@ -23,9 +23,9 @@ export const siteConfig = {
     phoneRaw,
     whatsappNumber,
     email: contactEmail,
-    isPlaceholderPhone: !process.env.NEXT_PUBLIC_PHONE_RAW,
-    isPlaceholderWhatsApp: !process.env.NEXT_PUBLIC_WHATSAPP_NUMBER,
-    isPlaceholderEmail: !process.env.NEXT_PUBLIC_CONTACT_EMAIL,
+    isPlaceholderPhone: false,
+    isPlaceholderWhatsApp: false,
+    isPlaceholderEmail: false,
     workingHours: "Mon–Sat, 10:00 AM – 7:00 PM IST",
     responseWindow: "Usually responds within 4 business hours",
     defaultWhatsAppMessage:
@@ -44,6 +44,16 @@ export const siteConfig = {
     github: process.env.NEXT_PUBLIC_GITHUB_URL?.trim() || "",
     linkedin: process.env.NEXT_PUBLIC_LINKEDIN_URL?.trim() || "",
     x: process.env.NEXT_PUBLIC_X_URL?.trim() || "",
+  },
+  forms: {
+    /**
+     * FormSubmit (https://formsubmit.co) AJAX endpoint. After activating, you
+     * can set NEXT_PUBLIC_FORMSUBMIT_ID to the random alias FormSubmit emails
+     * you, so your email address isn't visible in the page source.
+     */
+    formSubmitEndpoint: `https://formsubmit.co/ajax/${
+      process.env.NEXT_PUBLIC_FORMSUBMIT_ID?.trim() || contactEmail
+    }`,
   },
   analytics: {
     gaMeasurementId: process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID?.trim() || "",

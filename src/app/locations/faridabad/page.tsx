@@ -23,6 +23,8 @@ import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
 import { Accordion } from "@/components/ui/accordion";
 import { CtaBanner } from "@/components/cta/CtaBanner";
+import { CityServiceLinks } from "@/components/locations/CityServiceLinks";
+import { getCityServiceHref } from "@/data/local-services";
 import {
   TrackedExternalLink,
   TrackedRouteLink,
@@ -38,10 +40,11 @@ export const metadata: Metadata = buildPageMetadata({
     "website developer in faridabad",
     "faridabad website developer",
     "website designer faridabad",
+    "web design company faridabad",
     "web development company in faridabad",
-    "ecommerce website development company in faridabad",
-    "faridabad website redesign",
-    "faridabad website maintenance",
+    "best website development company in faridabad",
+    "website design company in faridabad",
+    "faridabad website development company",
     "faridabad business website developer",
   ],
 });
@@ -222,7 +225,7 @@ export default function FaridabadLocationPage() {
                 <h3 className="font-bold text-[#0A0A0A]">{svc.title}</h3>
                 <p className="mt-2 text-sm text-neutral-700">{svc.description}</p>
                 <Link
-                  href={`/services/${svc.targetServiceSlug}`}
+                  href={getCityServiceHref("faridabad", svc.targetServiceSlug)}
                   className="mt-3 inline-flex items-center gap-1 text-xs font-bold uppercase tracking-wider text-[#B45309] hover:underline"
                 >
                   <span>{svc.targetServiceLabel}</span>
@@ -250,6 +253,8 @@ export default function FaridabadLocationPage() {
           </div>
         </div>
       </section>
+
+      <CityServiceLinks citySlug="faridabad" />
 
       {/* Faridabad FAQs */}
       <section className="border-b border-neutral-300 bg-neutral-50">

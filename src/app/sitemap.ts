@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { siteConfig, SITE_LAST_MODIFIED } from "@/config/site";
 import { servicesData } from "@/data/services";
 import { locationsData } from "@/data/locations";
+import { localServicePages } from "@/data/local-services";
 import { blogPostsData } from "@/data/blog";
 import { caseStudiesData } from "@/data/projects";
 
@@ -103,6 +104,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.9,
   }));
 
+  const localServiceRoutes: MetadataRoute.Sitemap = localServicePages.map((p) => ({
+    url: `${baseUrl}/locations/${p.citySlug}/${p.slug}`,
+    lastModified: SITE_LAST_MODIFIED,
+    changeFrequency: "monthly",
+    priority: 0.85,
+  }));
+
   const caseStudyRoutes: MetadataRoute.Sitemap = caseStudiesData.map((cs) => ({
     url: `${baseUrl}/case-studies/${cs.slug}`,
     lastModified: SITE_LAST_MODIFIED,
@@ -121,6 +129,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...staticRoutes,
     ...serviceRoutes,
     ...locationRoutes,
+    ...localServiceRoutes,
     ...caseStudyRoutes,
     ...blogRoutes,
   ];

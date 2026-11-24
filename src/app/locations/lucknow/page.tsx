@@ -24,6 +24,7 @@ import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
 import { Accordion } from "@/components/ui/accordion";
 import { CtaBanner } from "@/components/cta/CtaBanner";
+import { CityServiceLinks } from "@/components/locations/CityServiceLinks";
 import {
   TrackedExternalLink,
   TrackedRouteLink,
@@ -37,14 +38,16 @@ export const metadata: Metadata = buildPageMetadata({
   path: "/locations/lucknow",
   keywords: [
     "website developer in lucknow",
-    "freelance web developer in lucknow",
-    "web development company in lucknow",
     "website designer in lucknow",
-    "ecommerce website development in lucknow",
-    "lucknow next js developer",
-    "lucknow react developer",
-    "lucknow website maintenance",
-    "lucknow website redesign",
+    "web designer in lucknow",
+    "website maker in lucknow",
+    "best website developer in lucknow",
+    "web development company in lucknow",
+    "website design company lucknow",
+    "lucknow website development company",
+    "lucknow business website developer",
+    "lucknow landing page developer",
+    "lucknow website seo services",
   ],
 });
 
@@ -171,10 +174,10 @@ export default function LucknowLocationPage() {
                 <strong>Lucknow ecommerce website developer</strong>, I engineer fast storefronts with UPI/Razorpay checkout, clean product SEO, and zero plugin sluggishness so mobile shoppers complete orders without friction.
               </p>
               <Link
-                href="/services/ecommerce-website-development"
+                href="/locations/lucknow/ecommerce-website-development"
                 className="mt-4 inline-flex items-center gap-1.5 text-sm font-bold text-[#0A0A0A] hover:text-[#B45309]"
               >
-                <span>Explore E-Commerce Architecture</span>
+                <span>E-commerce website development in Lucknow</span>
                 <ArrowRight aria-hidden="true" className="h-4 w-4" />
               </Link>
             </article>
@@ -192,10 +195,10 @@ export default function LucknowLocationPage() {
                 <strong>Lucknow React developer</strong>, <strong>Lucknow Next.js developer</strong>, or <strong>Lucknow SaaS developer</strong>. I work as your direct <strong>Lucknow full-stack developer</strong> and <strong>custom software developer</strong>—shipping typed APIs, PostgreSQL schemas, and clean dashboards without agency bloat.
               </p>
               <Link
-                href="/services/nextjs-development"
+                href="/locations/lucknow/web-application-development"
                 className="mt-4 inline-flex items-center gap-1.5 text-sm font-bold text-[#0A0A0A] hover:text-[#B45309]"
               >
-                <span>Explore Next.js &amp; Web Apps</span>
+                <span>Web app &amp; React / Next.js development in Lucknow</span>
                 <ArrowRight aria-hidden="true" className="h-4 w-4" />
               </Link>
             </article>
@@ -233,10 +236,10 @@ export default function LucknowLocationPage() {
                 Already have a dated site? A structured <strong>Lucknow website redesign</strong> upgrades UI and Core Web Vitals while safeguarding rankings via 301 redirects. Need ongoing care? Get dependable <strong>Lucknow website maintenance</strong>, <strong>website management</strong>, <strong>WordPress website developer</strong> support (or clean Next.js migration), and technical <strong>Lucknow website SEO services</strong>.
               </p>
               <Link
-                href="/services/website-redesign"
+                href="/locations/lucknow/website-maintenance-and-redesign"
                 className="mt-4 inline-flex items-center gap-1.5 text-sm font-bold text-[#0A0A0A] hover:text-[#B45309]"
               >
-                <span>Explore Redesign &amp; Care Plans</span>
+                <span>Website maintenance &amp; redesign in Lucknow</span>
                 <ArrowRight aria-hidden="true" className="h-4 w-4" />
               </Link>
             </article>
@@ -317,6 +320,8 @@ export default function LucknowLocationPage() {
           </div>
         </div>
       </section>
+
+      <CityServiceLinks citySlug="lucknow" />
 
       {/* Lucknow FAQs */}
       <section className="border-b border-neutral-300 bg-neutral-50">

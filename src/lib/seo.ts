@@ -181,11 +181,13 @@ export function buildServiceSchema({
   description,
   path,
   category,
+  areaServed,
 }: {
   name: string;
   description: string;
   path: string;
   category: string;
+  areaServed?: string[];
 }) {
   return {
     "@context": "https://schema.org",
@@ -197,7 +199,7 @@ export function buildServiceSchema({
     provider: {
       "@id": `${siteConfig.url}/#person`,
     },
-    areaServed: siteConfig.serviceAreas.map((area) => ({
+    areaServed: (areaServed || siteConfig.serviceAreas).map((area) => ({
       "@type": "Place",
       name: area,
     })),

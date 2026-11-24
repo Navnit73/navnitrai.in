@@ -99,6 +99,42 @@ export function ContactForm({
         return;
       }
 
+      // Honeypot hits are silently accepted by the API — don't email them.
+      if (data.referenceId !== "ACCEPTED") {
+        const referenceId = data.referenceId || "NEW";
+        const mailResponse = await fetch(siteConfig.forms.formSubmitEndpoint, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify({
+            _subject: `New enquiry ${referenceId}: ${values.projectType} — ${values.name}`,
+            _template: "table",
+            _captcha: "false",
+            _replyto: values.email,
+            Reference: referenceId,
+            Name: values.name,
+            email: values.email,
+            Phone: values.phone,
+            "Project Type": values.projectType,
+            Budget: values.budget,
+            "Project Details": values.description,
+            "Sent From": window.location.href,
+          }),
+        });
+        const mailData = (await mailResponse
+          .json()
+          .catch(() => ({}))) as { success?: string | boolean };
+
+        if (!mailResponse.ok || String(mailData.success) !== "true") {
+          setErrorMsg(
+            "Your enquiry couldn't be sent right now. Please message me on WhatsApp or call — I'll reply quickly."
+          );
+          return;
+        }
+      }
+
       trackConversion("contact_form_success", {
         source: sourceContext,
         service: values.projectType,
