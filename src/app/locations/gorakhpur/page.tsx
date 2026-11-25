@@ -24,6 +24,8 @@ import { buttonVariants } from "@/components/ui/button";
 import { Accordion } from "@/components/ui/accordion";
 import { CtaBanner } from "@/components/cta/CtaBanner";
 import { CityServiceLinks } from "@/components/locations/CityServiceLinks";
+import { CityPricingTable } from "@/components/locations/CityPricingTable";
+import { CityNearbyAreas } from "@/components/locations/CityNearbyAreas";
 import {
   TrackedExternalLink,
   TrackedRouteLink,
@@ -55,7 +57,7 @@ export default function GorakhpurLocationPage() {
       <JsonLd
         data={[
           buildProfessionalServiceSchema({
-            areaServed: ["Gorakhpur", "Golghar", "Taramandal", "GIDA", "Purvanchal"],
+            areaServed: ["Gorakhpur", "Golghar", "Taramandal", "GIDA", "Purvanchal", ...loc.nearbyAreas],
             url: absoluteUrl("/locations/gorakhpur"),
             description: loc.metaDescription,
           }),
@@ -295,6 +297,8 @@ export default function GorakhpurLocationPage() {
         </div>
       </section>
 
+      <CityPricingTable citySlug="gorakhpur" />
+
       <CityServiceLinks citySlug="gorakhpur" />
 
       {/* Gorakhpur FAQs */}
@@ -307,34 +311,7 @@ export default function GorakhpurLocationPage() {
         </div>
       </section>
 
-      {/* Cross Links */}
-      <section className="bg-neutral-50">
-        <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
-          <h2 className="text-sm font-bold uppercase tracking-wider text-neutral-700">
-            Nearby UP &amp; NCR Service Hubs
-          </h2>
-          <div className="mt-4 flex flex-wrap gap-3">
-            <Link
-              href="/locations/lucknow"
-              className="border border-[#0A0A0A] bg-white px-4 py-2 text-sm font-bold text-[#0A0A0A] hover:bg-[#FEF3C7]"
-            >
-              Website Developer in Lucknow →
-            </Link>
-            <Link
-              href="/locations/kanpur"
-              className="border border-[#0A0A0A] bg-white px-4 py-2 text-sm font-bold text-[#0A0A0A] hover:bg-[#FEF3C7]"
-            >
-              Website Developer in Kanpur →
-            </Link>
-            <Link
-              href="/locations/faridabad"
-              className="border border-[#0A0A0A] bg-white px-4 py-2 text-sm font-bold text-[#0A0A0A] hover:bg-[#FEF3C7]"
-            >
-              Website Developer in Faridabad →
-            </Link>
-          </div>
-        </div>
-      </section>
+      <CityNearbyAreas citySlug="gorakhpur" />
 
       <CtaBanner
         heading="Need a Dependable Website Developer in Gorakhpur?"

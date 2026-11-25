@@ -25,6 +25,8 @@ import { buttonVariants } from "@/components/ui/button";
 import { Accordion } from "@/components/ui/accordion";
 import { CtaBanner } from "@/components/cta/CtaBanner";
 import { CityServiceLinks } from "@/components/locations/CityServiceLinks";
+import { CityPricingTable } from "@/components/locations/CityPricingTable";
+import { CityNearbyAreas } from "@/components/locations/CityNearbyAreas";
 import {
   TrackedExternalLink,
   TrackedRouteLink,
@@ -57,7 +59,7 @@ export default function LucknowLocationPage() {
       <JsonLd
         data={[
           buildProfessionalServiceSchema({
-            areaServed: ["Lucknow", "Gomti Nagar", "Hazratganj", "Uttar Pradesh"],
+            areaServed: ["Lucknow", "Gomti Nagar", "Hazratganj", "Uttar Pradesh", ...loc.nearbyAreas],
             url: absoluteUrl("/locations/lucknow"),
             description: loc.metaDescription,
           }),
@@ -321,6 +323,8 @@ export default function LucknowLocationPage() {
         </div>
       </section>
 
+      <CityPricingTable citySlug="lucknow" />
+
       <CityServiceLinks citySlug="lucknow" />
 
       {/* Lucknow FAQs */}
@@ -333,34 +337,7 @@ export default function LucknowLocationPage() {
         </div>
       </section>
 
-      {/* Regional Cross-Links */}
-      <section className="bg-white">
-        <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
-          <h2 className="text-sm font-bold uppercase tracking-wider text-neutral-700">
-            Other Cities Served in Uttar Pradesh &amp; NCR
-          </h2>
-          <div className="mt-4 flex flex-wrap gap-3">
-            <Link
-              href="/locations/gorakhpur"
-              className="border border-[#0A0A0A] bg-neutral-50 px-4 py-2 text-sm font-bold text-[#0A0A0A] hover:bg-[#FEF3C7]"
-            >
-              Website Developer in Gorakhpur →
-            </Link>
-            <Link
-              href="/locations/kanpur"
-              className="border border-[#0A0A0A] bg-neutral-50 px-4 py-2 text-sm font-bold text-[#0A0A0A] hover:bg-[#FEF3C7]"
-            >
-              Website Developer in Kanpur →
-            </Link>
-            <Link
-              href="/locations/faridabad"
-              className="border border-[#0A0A0A] bg-neutral-50 px-4 py-2 text-sm font-bold text-[#0A0A0A] hover:bg-[#FEF3C7]"
-            >
-              Website Developer in Faridabad →
-            </Link>
-          </div>
-        </div>
-      </section>
+      <CityNearbyAreas citySlug="lucknow" />
 
       <CtaBanner
         heading="Ready to Work With a Dedicated Website Developer in Lucknow?"

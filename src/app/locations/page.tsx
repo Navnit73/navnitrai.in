@@ -13,13 +13,15 @@ import { CtaBanner } from "@/components/cta/CtaBanner";
 import { TrackedExternalLink } from "@/components/cta/TrackedLink";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Web Development in Lucknow, Gorakhpur, Kanpur & Faridabad | Navnit Rai",
+  title: "Website Developer in Lucknow, Gorakhpur, Kanpur, Varanasi & UP | Navnit Rai",
   description:
-    "Explore dedicated web development service hubs for Lucknow, Gorakhpur, Kanpur, Faridabad, and remote full-stack collaborations across India.",
+    "Freelance website developer serving Lucknow, Gorakhpur, Kanpur, Varanasi, Prayagraj, Faridabad and nearby Uttar Pradesh districts. Transparent ₹ pricing and direct WhatsApp support.",
   path: "/locations",
   keywords: [
     "freelance web developer uttar pradesh ncr",
     "website developer lucknow gorakhpur kanpur faridabad",
+    "website developer uttar pradesh",
+    "website developer varanasi prayagraj",
     "indian city web development services",
   ],
 });
@@ -56,7 +58,7 @@ export default function LocationsHubPage() {
             Web Development Services Across Key Indian Cities
           </h1>
           <p className="mt-4 max-w-2xl text-lg leading-relaxed text-neutral-700">
-            Rather than publishing hundreds of duplicate thin city pages, I maintain dedicated regional hubs tailored to the distinct industrial, healthcare, educational, and D2C landscapes of Lucknow, Gorakhpur, Kanpur, and Faridabad—plus seamless remote work across India.
+            Rather than publishing hundreds of duplicate thin city pages, I maintain dedicated regional hubs tailored to the distinct industrial, healthcare, educational, and D2C landscapes of Lucknow, Gorakhpur, Kanpur, Varanasi, Prayagraj, and Faridabad—plus seamless remote work across India.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">

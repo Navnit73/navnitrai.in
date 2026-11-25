@@ -1,4 +1,4 @@
-export const SITE_LAST_MODIFIED = "2026-11-23";
+export const SITE_LAST_MODIFIED = "2026-11-25";
 
 const phoneDisplay =
   process.env.NEXT_PUBLIC_PHONE_DISPLAY?.trim() || "+91 91297 40113";
@@ -35,6 +35,8 @@ export const siteConfig = {
     "Lucknow",
     "Gorakhpur",
     "Kanpur",
+    "Varanasi",
+    "Prayagraj",
     "Faridabad",
     "Delhi NCR",
     "Uttar Pradesh",

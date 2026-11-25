@@ -16,6 +16,10 @@ export interface CityLocation {
   slug: string;
   city: string;
   stateRegion: string;
+  /** City name in Hindi (Devanagari), used for Hindi-query copy. */
+  hindiName: string;
+  /** Nearby districts/towns served remotely from this hub (rendered on page + areaServed schema). */
+  nearbyAreas: string[];
   seoTitle: string;
   metaDescription: string;
   h1: string;
@@ -56,6 +60,8 @@ export const locationsData: CityLocation[] = [
     slug: "lucknow",
     city: "Lucknow",
     stateRegion: "Uttar Pradesh",
+    hindiName: "लखनऊ",
+    nearbyAreas: ["Barabanki", "Unnao", "Sitapur", "Hardoi", "Raebareli", "Ayodhya", "Sultanpur", "Lakhimpur Kheri"],
     seoTitle: "Website Developer in Lucknow | Freelance Web Development — Navnit Rai",
     metaDescription:
       "Hire an independent freelance website developer in Lucknow for business websites, e-commerce stores, Next.js/React web apps, redesigns, maintenance, and local SEO.",
@@ -248,6 +254,16 @@ export const locationsData: CityLocation[] = [
         answer:
           "Yes. I build full-stack web applications, custom software portals, and SaaS MVPs using React, Next.js, TypeScript, Node.js, and PostgreSQL.",
       },
+      {
+        question: "लखनऊ में वेबसाइट बनवाने का खर्च कितना है?",
+        answer:
+          "लखनऊ में एक सिंगल लैंडिंग पेज ₹25,000 से कम में, बिज़नेस वेबसाइट (5–10 पेज) ₹25,000 से ₹60,000 में, और ई-कॉमर्स स्टोर ₹60,000 से ₹1,50,000 में बन जाता है। काम शुरू होने से पहले आपको लिखित कोटेशन मिलता है, और डोमेन, होस्टिंग व कोड हमेशा आपके नाम पर रहते हैं।",
+      },
+      {
+        question: "क्या आप लखनऊ के आसपास के शहरों के लिए भी वेबसाइट बनाते हैं?",
+        answer:
+          "हाँ। बाराबंकी, उन्नाव, सीतापुर, हरदोई, रायबरेली और अयोध्या के क्लाइंट्स के साथ WhatsApp, फ़ोन और वीडियो कॉल के ज़रिए काम करता हूँ। बातचीत हिंदी या अंग्रेज़ी—जो आपको सुविधाजनक हो।",
+      },
     ],
     whatsappMessage:
       "Hi Navnit, I am looking for a website developer in Lucknow to discuss my project.",
@@ -256,6 +272,8 @@ export const locationsData: CityLocation[] = [
     slug: "gorakhpur",
     city: "Gorakhpur",
     stateRegion: "Eastern Uttar Pradesh (Purvanchal)",
+    hindiName: "गोरखपुर",
+    nearbyAreas: ["Deoria", "Kushinagar", "Basti", "Maharajganj", "Sant Kabir Nagar", "Siddharthnagar", "Azamgarh", "Ballia", "Mau"],
     seoTitle: "Website Developer in Gorakhpur | Freelance Web Development — Navnit Rai",
     metaDescription:
       "Hire a freelance website developer in Gorakhpur for clinics, coaching institutes, e-commerce, React/Next.js web apps, hosting, maintenance, and local SEO.",
@@ -437,6 +455,26 @@ export const locationsData: CityLocation[] = [
         answer:
           "I primarily engineer custom apps with Next.js, React, TypeScript, Node.js, and PostgreSQL—giving startups maintainable production code from day one.",
       },
+      {
+        question: "How much does a website cost in Gorakhpur?",
+        answer:
+          "A single landing page starts under ₹25,000, a multi-page Gorakhpur business website usually costs ₹25,000–₹60,000, an online store ₹60,000–₹1,50,000, and custom web apps start around ₹1,50,000. You get a fixed written quote before work begins—no hidden yearly “package” renewals.",
+      },
+      {
+        question: "Do you work with businesses in Deoria, Kushinagar, Basti and Maharajganj?",
+        answer:
+          "Yes. Many Purvanchal businesses outside Gorakhpur city—shops, schools, clinics and traders in Deoria, Kushinagar, Basti, Maharajganj, Sant Kabir Nagar and Azamgarh—work with me remotely over WhatsApp and video calls, with the same pricing and support.",
+      },
+      {
+        question: "गोरखपुर में वेबसाइट बनवाने का खर्च कितना है?",
+        answer:
+          "गोरखपुर में बिज़नेस वेबसाइट आमतौर पर ₹25,000 से ₹60,000 में बनती है, लैंडिंग पेज ₹25,000 से कम में, और ऑनलाइन स्टोर ₹60,000 से ₹1,50,000 में। सस्ते ₹5,000 वाले टेम्पलेट पैकेज अक्सर धीमे होते हैं और Google पर रैंक नहीं करते—मैं कस्टम, तेज़ और SEO-फ्रेंडली वेबसाइट बनाता हूँ जो पूरी तरह आपके नाम पर रहती है।",
+      },
+      {
+        question: "क्या आप गोरखपुर में हिंदी में बात करके वेबसाइट बनाते हैं?",
+        answer:
+          "हाँ। पूरी बातचीत हिंदी में WhatsApp या फ़ोन पर हो सकती है। ज़रूरत हो तो वेबसाइट का कंटेंट भी हिंदी या हिंदी-अंग्रेज़ी दोनों में तैयार किया जा सकता है।",
+      },
     ],
     whatsappMessage:
       "Hi Navnit, I am searching for a website developer in Gorakhpur to discuss a project.",
@@ -445,6 +483,8 @@ export const locationsData: CityLocation[] = [
     slug: "kanpur",
     city: "Kanpur",
     stateRegion: "Uttar Pradesh",
+    hindiName: "कानपुर",
+    nearbyAreas: ["Kanpur Dehat", "Unnao", "Kannauj", "Etawah", "Fatehpur", "Auraiya", "Farrukhabad", "Jhansi"],
     seoTitle: "Website Developer in Kanpur | Freelance Web Development — Navnit Rai",
     metaDescription:
       "Hire a freelance website developer in Kanpur for manufacturing B2B export catalogs, e-commerce design, custom portals, website redesigns, and maintenance.",
@@ -618,6 +658,16 @@ export const locationsData: CityLocation[] = [
         answer:
           "Yes. Monthly care plans cover security patches, backups, speed checks, and product/catalog updates.",
       },
+      {
+        question: "How much does a website cost in Kanpur?",
+        answer:
+          "Landing pages start under ₹25,000, Kanpur business and B2B company websites usually cost ₹25,000–₹60,000, export catalogs and online stores ₹60,000–₹1,50,000, and custom portals or web apps start around ₹1,50,000. Every project gets a fixed written quote first.",
+      },
+      {
+        question: "कानपुर में वेबसाइट बनवाने का खर्च कितना है?",
+        answer:
+          "कानपुर में बिज़नेस या कंपनी वेबसाइट आमतौर पर ₹25,000 से ₹60,000 में बनती है, B2B प्रोडक्ट कैटलॉग या ई-कॉमर्स स्टोर ₹60,000 से ₹1,50,000 में, और कस्टम सॉफ़्टवेयर/पोर्टल ₹1,50,000 से शुरू होते हैं। उन्नाव, कानपुर देहात, कन्नौज और इटावा के बिज़नेस के साथ भी रिमोट काम करता हूँ।",
+      },
     ],
     whatsappMessage:
       "Hi Navnit, I am looking for a website developer in Kanpur for my business.",
@@ -626,6 +676,8 @@ export const locationsData: CityLocation[] = [
     slug: "faridabad",
     city: "Faridabad",
     stateRegion: "Delhi NCR / Haryana",
+    hindiName: "फरीदाबाद",
+    nearbyAreas: ["Ballabgarh", "Palwal", "Gurugram", "South Delhi", "Noida", "Greater Noida"],
     seoTitle: "Website Developer in Faridabad | Freelance Web Development — Navnit Rai",
     metaDescription:
       "Hire an independent freelance website developer in Faridabad for B2B industrial sites, corporate websites, e-commerce stores, redesigns, and maintenance.",
@@ -801,6 +853,397 @@ export const locationsData: CityLocation[] = [
     ],
     whatsappMessage:
       "Hi Navnit, I am looking for a website developer in Faridabad to discuss a project.",
+  },
+  {
+    slug: "varanasi",
+    city: "Varanasi",
+    stateRegion: "Uttar Pradesh",
+    hindiName: "वाराणसी",
+    nearbyAreas: ["Chandauli", "Mirzapur", "Jaunpur", "Ghazipur", "Bhadohi", "Azamgarh", "Sonbhadra"],
+    seoTitle: "Website Developer in Varanasi | Freelance Web Design — Navnit Rai",
+    metaDescription:
+      "Freelance website developer in Varanasi for hotels, guest houses, Banarasi saree sellers, clinics and coaching institutes. Fast websites, online stores and booking systems from ₹25,000.",
+    h1: "Freelance Website Developer in Varanasi",
+    primaryKeyword: "website developer in varanasi",
+    secondaryKeywords: [
+      "web developer in varanasi",
+      "varanasi website developer",
+      "website designer in varanasi",
+      "web development company in varanasi",
+      "website design company in varanasi",
+      "website development in varanasi",
+      "banarasi saree ecommerce website",
+      "hotel website developer varanasi",
+    ],
+    heroLead:
+      "Fast, mobile-first websites for Varanasi hotels, guest houses, Banarasi silk sellers, clinics and coaching institutes—built to win direct bookings and enquiries instead of paying commission to OTAs and marketplaces.",
+    marketOverview:
+      "Varanasi's economy runs on visitors and craft: pilgrims and tourists book stays near Dashashwamedh and Assi Ghat, buyers across India and abroad shop for Banarasi silk from Madanpura and Lohta weavers, and patients from across Purvanchal and Bihar travel to hospitals around Lanka and Mahmoorganj. Most of these searches happen on a phone, often from outside the city—so a slow or outdated website loses the booking or order to an OTA, a marketplace, or a competitor one tap away.",
+    commercialCorridors: [
+      "Sigra, Mahmoorganj & Rathyatra",
+      "Lanka, Assi & BHU Area",
+      "Godowlia, Dashashwamedh & Ghats",
+      "Cantt, Nadesar & Lahurabir",
+      "Madanpura, Lohta & Sarnath",
+    ],
+    keyLocalIndustries: [
+      {
+        sector: "Hotels, Guest Houses & Tour Operators",
+        websiteNeed:
+          "Room galleries, ghat-proximity maps, direct WhatsApp/booking enquiries and Ganga Aarti or boat-ride packages—so you keep the 15–20% OTA commission.",
+      },
+      {
+        sector: "Banarasi Silk Saree & Handloom Sellers",
+        websiteNeed:
+          "Catalogue or e-commerce stores with zoomable weave photos, GI-tag authenticity details, UPI/international payments and pan-India shipping.",
+      },
+      {
+        sector: "Hospitals, Clinics & Diagnostic Centres",
+        websiteNeed:
+          "Doctor profiles, OPD timings, test price lists and one-tap appointment calls for patients travelling from Purvanchal and Bihar.",
+      },
+      {
+        sector: "Coaching Institutes, Schools & Puja Services",
+        websiteNeed:
+          "Admission landing pages, results and notice boards, online puja/ritual booking pages, and fee payment links.",
+      },
+    ],
+    narrativeSections: [
+      {
+        eyebrow: "Hotels & Tourism",
+        heading: "Hotel & Guest House Website Development in Varanasi",
+        paragraphs: [
+          "Most Varanasi stays depend on Booking.com, MakeMyTrip and Airbnb, paying a big cut on every night sold. A good hotel website won't replace OTAs overnight, but it lets repeat guests, families and tour groups book you directly—on WhatsApp, by call, or through a simple enquiry form—at a better margin for you.",
+          "I build fast, photo-rich hotel and guest house sites that load quickly even on a tourist's roaming connection: clear room types and prices, distance to the ghats, Google Maps directions, reviews, and packages for Ganga Aarti, boat rides and Sarnath trips. Each page is structured so Google understands your location and amenities.",
+        ],
+        bullets: [
+          "Room and package pages with WhatsApp and call booking buttons",
+          "Hindi + English content for domestic pilgrims and foreign tourists",
+          "Hotel schema and Google Business Profile alignment for map searches",
+        ],
+      },
+      {
+        eyebrow: "Banarasi Silk & E-Commerce",
+        heading: "E-Commerce Websites for Banarasi Saree & Handloom Businesses",
+        paragraphs: [
+          "Banarasi sarees sell across India and to the diaspora, but buyers can't touch the fabric. Your store has to build trust through close-up weave photos, honest descriptions of katan, organza or georgette, real GI-tag information, and clear return and shipping policies.",
+          "I build online stores and WhatsApp-first catalogues for Varanasi weavers, wholesalers and boutiques—with UPI, card and international payment options, shipping by pin code, and product pages written to rank for searches like “pure Banarasi silk saree online”.",
+        ],
+      },
+      {
+        eyebrow: "Custom Software & Maintenance",
+        heading: "Web Apps, Website Redesign & Maintenance for Varanasi Businesses",
+        paragraphs: [
+          "Beyond websites, I build custom tools—booking systems for guest houses, patient appointment portals, coaching fee and result systems—using React, Next.js and PostgreSQL, with code and hosting owned by you.",
+          "If your current site is slow, hacked, or built by a vendor who stopped answering calls, I can take over maintenance or redesign it without losing your existing Google rankings, using proper 301 redirects.",
+        ],
+      },
+    ],
+    freelancerVsCompanyAngle: {
+      heading: "Independent Developer vs. Web Development Company in Varanasi",
+      summary:
+        "Many Varanasi businesses buy low-cost “website packages” that bundle a reused template, shared hosting and a yearly renewal fee. Working directly with an independent developer gets you a custom, faster site that you fully own—without paying for an agency's sales layer.",
+      rows: [
+        {
+          factor: "Who builds your site",
+          freelanceNavnit: "Navnit Rai directly—the developer you talk to",
+          typicalAgency: "Sales executive, then a junior template installer",
+        },
+        {
+          factor: "Ownership",
+          freelanceNavnit: "Domain, hosting and code in your name",
+          typicalAgency: "Often held in the vendor's reseller account",
+        },
+        {
+          factor: "Speed on mobile",
+          freelanceNavnit: "Custom, lightweight build tuned for Core Web Vitals",
+          typicalAgency: "Heavy themes and plugins",
+        },
+        {
+          factor: "After launch",
+          freelanceNavnit: "Direct WhatsApp support and clear monthly plans",
+          typicalAgency: "Yearly renewal fees, slow changes",
+        },
+      ],
+    },
+    localServiceHighlights: [
+      {
+        title: "Varanasi Business Websites",
+        description:
+          "Credible websites for hotels, clinics, schools, consultants and shops that turn Google searches into calls and WhatsApp enquiries.",
+        targetServiceSlug: "business-website-development",
+        targetServiceLabel: "Explore Business Websites",
+      },
+      {
+        title: "Banarasi Saree & Handloom Online Stores",
+        description:
+          "Mobile-first e-commerce with UPI checkout, international payments and product pages built to rank.",
+        targetServiceSlug: "ecommerce-website-development",
+        targetServiceLabel: "Explore E-Commerce Development",
+      },
+      {
+        title: "Booking Systems & Web Apps",
+        description:
+          "Custom booking, appointment and management tools built with React and Next.js, fully owned by you.",
+        targetServiceSlug: "web-application-development",
+        targetServiceLabel: "Explore Web App Development",
+      },
+      {
+        title: "Redesign & Maintenance",
+        description:
+          "Fix slow, outdated or hacked sites and keep them updated, backed up and secure every month.",
+        targetServiceSlug: "website-maintenance-management",
+        targetServiceLabel: "Explore Maintenance",
+      },
+      {
+        title: "Landing Pages for Ads",
+        description:
+          "Focused pages for admission drives, festival offers, Dev Deepawali packages and Google/Meta ad campaigns.",
+        targetServiceSlug: "landing-page-development",
+        targetServiceLabel: "Explore Landing Pages",
+      },
+      {
+        title: "SEO-Ready Websites",
+        description:
+          "Schema, fast loading and clean page structure so your Varanasi business shows up in local Google results.",
+        targetServiceSlug: "seo-friendly-website-development",
+        targetServiceLabel: "Explore SEO-Friendly Development",
+      },
+    ],
+    wordpressAndHostingNote: {
+      title: "WordPress, Hosting & Upgrades in Varanasi",
+      body: "Already on WordPress? I can fix, speed up and maintain it, or move you to a faster Next.js site when that makes more sense. Hosting is always set up in your own account—no reseller lock-in.",
+    },
+    collaborationModel: [
+      "Project discussions in Hindi or English over WhatsApp, phone and video calls.",
+      "Preview links at every stage so you see progress before launch.",
+      "Domain, hosting and code registered in your name from day one.",
+    ],
+    faqs: [
+      {
+        question: "How much does a website cost in Varanasi?",
+        answer:
+          "A landing page starts under ₹25,000, a business or hotel website usually costs ₹25,000–₹60,000, an online store ₹60,000–₹1,50,000, and custom booking systems or web apps start around ₹1,50,000. You get a fixed written quote first.",
+      },
+      {
+        question: "Can you build a hotel or guest house website that takes direct bookings?",
+        answer:
+          "Yes. I build room and package pages with WhatsApp, call and enquiry buttons, and can add an online booking and payment flow if you need it—so more guests book you directly instead of through OTAs.",
+      },
+      {
+        question: "Can you build an online store for Banarasi sarees?",
+        answer:
+          "Yes. Stores include detailed product photos, variants, UPI/card payments, international payment options, shipping rules and product pages written for Google search.",
+      },
+      {
+        question: "Do you work with businesses in Chandauli, Mirzapur, Jaunpur and Ghazipur?",
+        answer:
+          "Yes. I work remotely with businesses across eastern UP over WhatsApp and video calls, with the same pricing and support as clients in Varanasi city.",
+      },
+      {
+        question: "वाराणसी में वेबसाइट बनवाने का खर्च कितना है?",
+        answer:
+          "वाराणसी में होटल या बिज़नेस वेबसाइट आमतौर पर ₹25,000 से ₹60,000 में बनती है, और बनारसी साड़ी या अन्य प्रोडक्ट का ऑनलाइन स्टोर ₹60,000 से ₹1,50,000 में। डोमेन, होस्टिंग और कोड पूरी तरह आपके नाम पर रहते हैं, और बातचीत हिंदी में हो सकती है।",
+      },
+    ],
+    whatsappMessage:
+      "Hi Navnit, I am looking for a website developer in Varanasi to discuss a project.",
+  },
+  {
+    slug: "prayagraj",
+    city: "Prayagraj",
+    stateRegion: "Uttar Pradesh",
+    hindiName: "प्रयागराज",
+    nearbyAreas: ["Kaushambi", "Pratapgarh", "Fatehpur", "Bhadohi", "Mirzapur", "Chitrakoot", "Jaunpur"],
+    seoTitle: "Website Developer in Prayagraj (Allahabad) | Freelance — Navnit Rai",
+    metaDescription:
+      "Freelance website developer in Prayagraj (Allahabad) for coaching institutes, advocates, hospitals, hotels and local businesses. Fast, SEO-ready websites and portals from ₹25,000.",
+    h1: "Freelance Website Developer in Prayagraj (Allahabad)",
+    primaryKeyword: "website developer in prayagraj",
+    secondaryKeywords: [
+      "website developer in allahabad",
+      "web developer in prayagraj",
+      "prayagraj website developer",
+      "website designer in prayagraj",
+      "web development company in prayagraj",
+      "web development company in allahabad",
+      "website design company in prayagraj",
+      "coaching institute website developer",
+      "advocate website developer prayagraj",
+    ],
+    heroLead:
+      "Fast, credible websites and portals for Prayagraj coaching institutes, advocates, hospitals, hotels and local businesses—built to turn Google searches into admissions, consultations and calls.",
+    marketOverview:
+      "Prayagraj is one of India's biggest competitive-exam preparation centres, with thousands of UPSC, UPPSC, SSC and banking aspirants in Civil Lines, Katra and Allahapur. It is also home to the Allahabad High Court, major hospitals, and the Magh Mela and Kumbh, which bring huge seasonal demand for stays and services. Students, clients and visitors compare options on their phones—so a slow or outdated website quietly sends them to a competitor.",
+    commercialCorridors: [
+      "Civil Lines & Sardar Patel Marg",
+      "Katra, Allahapur & University Area",
+      "High Court & Kutchery Area",
+      "Chowk, Johnstonganj & Kareli",
+      "Naini Industrial Area & Jhunsi",
+    ],
+    keyLocalIndustries: [
+      {
+        sector: "Coaching Institutes & Libraries",
+        websiteNeed:
+          "Batch and fee pages, result showcases, admission landing pages for ads, test-series portals and quick WhatsApp enquiry buttons.",
+      },
+      {
+        sector: "Advocates & Law Firms",
+        websiteNeed:
+          "Professional, Bar Council–compliant information websites listing practice areas, courts and contact details—without advertising-style claims.",
+      },
+      {
+        sector: "Hospitals, Clinics & Diagnostics",
+        websiteNeed:
+          "Doctor profiles, OPD schedules, test lists and appointment calls for patients from Prayagraj and neighbouring districts.",
+      },
+      {
+        sector: "Hotels, Dharamshalas & Mela Services",
+        websiteNeed:
+          "Booking enquiry pages ready for Magh Mela and Kumbh traffic spikes, with maps, packages and fast mobile loading.",
+      },
+    ],
+    narrativeSections: [
+      {
+        eyebrow: "Coaching & Education",
+        heading: "Coaching Institute Website Development in Prayagraj",
+        paragraphs: [
+          "Aspirants arriving in Prayagraj shortlist coaching institutes and libraries on Google and YouTube before visiting Katra or Civil Lines. A clear website with batch timings, faculty, fees, results and an easy enquiry button wins that comparison—most institute sites today are either outdated or a single Facebook page.",
+          "I build fast institute websites, admission landing pages for Google and Meta ads, and, when needed, student portals for test series, attendance and fee tracking. Everything is mobile-first because nearly every student searches on a phone.",
+        ],
+        bullets: [
+          "Batch, course and fee pages that rank for local exam-coaching searches",
+          "Admission campaign landing pages with WhatsApp lead capture",
+          "Student login portals for test series and study material",
+        ],
+      },
+      {
+        eyebrow: "Advocates & Professionals",
+        heading: "Websites for Advocates and Law Firms Near Allahabad High Court",
+        paragraphs: [
+          "Bar Council of India rules restrict advocates from soliciting work, but an informational website listing your name, practice areas, enrolment details and contact information is permitted. Clients increasingly search for advocates online, and a clean, professional site builds credibility before the first call.",
+          "I build simple, fast, rule-conscious websites for advocates, chambers and law firms practising at the Allahabad High Court and district courts—no testimonials, no “best lawyer” claims, just clear information and contact details.",
+        ],
+      },
+      {
+        eyebrow: "Business, E-Commerce & Maintenance",
+        heading: "Business Websites, Online Stores & Maintenance in Prayagraj",
+        paragraphs: [
+          "For hospitals, hotels, shops and Naini-based manufacturers, I build business websites, product catalogues and online stores with UPI checkout—plus custom web apps when spreadsheets stop working.",
+          "Already have a site that's slow or abandoned by its developer? I take over maintenance or redesign it while preserving your Google rankings, with domain, hosting and code kept in your name.",
+        ],
+      },
+    ],
+    freelancerVsCompanyAngle: {
+      heading: "Independent Developer vs. Web Development Company in Prayagraj",
+      summary:
+        "Many Prayagraj and Allahabad web companies sell cheap yearly packages built on reused templates. Working directly with an independent developer gets you a faster, custom site with full ownership and direct support.",
+      rows: [
+        {
+          factor: "Who builds your site",
+          freelanceNavnit: "Navnit Rai directly—the developer you talk to",
+          typicalAgency: "Sales executive, then a junior template installer",
+        },
+        {
+          factor: "Ownership",
+          freelanceNavnit: "Domain, hosting and code in your name",
+          typicalAgency: "Often held in the vendor's reseller account",
+        },
+        {
+          factor: "Speed on mobile",
+          freelanceNavnit: "Custom, lightweight build tuned for Core Web Vitals",
+          typicalAgency: "Heavy themes and plugins",
+        },
+        {
+          factor: "After launch",
+          freelanceNavnit: "Direct WhatsApp support and clear monthly plans",
+          typicalAgency: "Yearly renewal fees, slow changes",
+        },
+      ],
+    },
+    localServiceHighlights: [
+      {
+        title: "Prayagraj Business Websites",
+        description:
+          "Credible websites for hospitals, hotels, shops and professionals that turn local searches into calls.",
+        targetServiceSlug: "business-website-development",
+        targetServiceLabel: "Explore Business Websites",
+      },
+      {
+        title: "Coaching Admission Landing Pages",
+        description:
+          "Focused pages for admission drives and Google/Meta ad campaigns with WhatsApp lead capture.",
+        targetServiceSlug: "landing-page-development",
+        targetServiceLabel: "Explore Landing Pages",
+      },
+      {
+        title: "Student Portals & Web Apps",
+        description:
+          "Test series, attendance, fee and result systems built with React, Next.js and PostgreSQL.",
+        targetServiceSlug: "web-application-development",
+        targetServiceLabel: "Explore Web App Development",
+      },
+      {
+        title: "Online Stores",
+        description:
+          "Mobile-first e-commerce with UPI checkout and product pages built to rank on Google.",
+        targetServiceSlug: "ecommerce-website-development",
+        targetServiceLabel: "Explore E-Commerce Development",
+      },
+      {
+        title: "Redesign & Maintenance",
+        description:
+          "Speed fixes, security, backups and monthly updates for existing websites.",
+        targetServiceSlug: "website-maintenance-management",
+        targetServiceLabel: "Explore Maintenance",
+      },
+      {
+        title: "SEO-Ready Websites",
+        description:
+          "Schema, fast loading and clean structure so you appear in Prayagraj and Allahabad searches.",
+        targetServiceSlug: "seo-friendly-website-development",
+        targetServiceLabel: "Explore SEO-Friendly Development",
+      },
+    ],
+    wordpressAndHostingNote: {
+      title: "WordPress, Hosting & Upgrades in Prayagraj",
+      body: "Running WordPress already? I can fix, speed up and maintain it, or move you to a faster Next.js site when that's the better choice. Hosting is set up in your own account—no reseller lock-in.",
+    },
+    collaborationModel: [
+      "Project discussions in Hindi or English over WhatsApp, phone and video calls.",
+      "Preview links at every stage so you see progress before launch.",
+      "Domain, hosting and code registered in your name from day one.",
+    ],
+    faqs: [
+      {
+        question: "How much does a website cost in Prayagraj?",
+        answer:
+          "A landing page starts under ₹25,000, a business or coaching institute website usually costs ₹25,000–₹60,000, an online store ₹60,000–₹1,50,000, and student portals or custom web apps start around ₹1,50,000. You get a fixed written quote first.",
+      },
+      {
+        question: "Is Prayagraj the same as Allahabad for your services?",
+        answer:
+          "Yes. Prayagraj was officially renamed from Allahabad in 2018. I serve businesses across the city and the wider district, whichever name you search with.",
+      },
+      {
+        question: "Can advocates have a website under Bar Council rules?",
+        answer:
+          "Advocates can publish an informational website with their name, contact details, enrolment number and areas of practice. I build sites that stick to plain information—no testimonials, rankings or solicitation—so they stay within the rules.",
+      },
+      {
+        question: "Do you build student portals for coaching institutes?",
+        answer:
+          "Yes. Portals can include student logins, test series, study material downloads, attendance, fee tracking and results, built in stages so you can launch quickly.",
+      },
+      {
+        question: "प्रयागराज (इलाहाबाद) में वेबसाइट बनवाने का खर्च कितना है?",
+        answer:
+          "प्रयागराज में कोचिंग इंस्टिट्यूट या बिज़नेस वेबसाइट आमतौर पर ₹25,000 से ₹60,000 में बनती है, और स्टूडेंट पोर्टल या कस्टम सॉफ़्टवेयर ₹1,50,000 से शुरू होता है। कौशांबी, प्रतापगढ़ और फतेहपुर के क्लाइंट्स के साथ भी WhatsApp पर हिंदी में काम करता हूँ।",
+      },
+    ],
+    whatsappMessage:
+      "Hi Navnit, I am looking for a website developer in Prayagraj to discuss a project.",
   },
 ];
 

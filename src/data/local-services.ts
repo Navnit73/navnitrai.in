@@ -871,6 +871,174 @@ export const localServicePages: LocalServicePage[] = [
     whatsappMessage:
       "Hi Navnit, I'm from Kanpur and need website maintenance / redesign.",
   },
+  {
+    citySlug: "kanpur",
+    slug: "wordpress-website-development",
+    kind: "wordpress",
+    navLabel: "WordPress Website Development",
+    globalServiceSlug: "website-development",
+    seoTitle: "WordPress Website Developer in Kanpur | Custom WordPress Sites & Fixes",
+    metaDescription:
+      "Freelance WordPress developer in Kanpur for company websites, coaching and school sites, WooCommerce catalogues, plus speed fixes and hacked-site cleanup. Fixed quote, your ownership.",
+    h1: "WordPress Website Developer in Kanpur",
+    primaryKeyword: "wordpress developer in kanpur",
+    secondaryKeywords: [
+      "wordpress website development in kanpur",
+      "wordpress development company in kanpur",
+      "kanpur wordpress developer",
+    ],
+    heroLead:
+      "Need a website your own staff can update? I build clean, fast WordPress sites for Kanpur manufacturers, coaching institutes, schools and traders — and repair slow or hacked WordPress sites that an earlier vendor left behind.",
+    priceLabel: "₹25,000 – ₹60,000",
+    timeline: "2–3 weeks",
+    audiences: [
+      {
+        title: "Coaching institutes & schools",
+        text: "Kakadeo and Swaroop Nagar institutes that publish results, batch timings, notices and admission forms every week — without calling a developer each time.",
+      },
+      {
+        title: "Manufacturers & traders",
+        text: "Panki, Dada Nagar and Fazalganj units that want a simple product catalogue with enquiry buttons that the office team can keep up to date.",
+      },
+      {
+        title: "Slow, broken or hacked sites",
+        text: "Site opening in 8 seconds, spam pages in Google, or a white screen after an update? I clean it up, speed it up and lock it down.",
+      },
+    ],
+    included: [
+      "Custom design built for your business — not a ₹2,000 theme with your logo",
+      "Only the plugins you actually need, so the site stays fast and secure",
+      "Easy editing for pages, products, notices and blog posts",
+      "WhatsApp, call and enquiry/RFQ form buttons on every page",
+      "Google basics: titles, descriptions, sitemap and Search Console",
+      "Security hardening, automatic backups and update plan",
+      "Hosting and domain registered in your name",
+      "Training video so your team can update the site",
+    ],
+    localSection: {
+      heading: "Why so many Kanpur WordPress sites are slow — and how to fix it",
+      paragraphs: [
+        "A lot of Kanpur businesses got their website from a local vendor years ago: a heavy multipurpose theme, 25+ plugins, cheap shared hosting, and nobody updating it since. That is why the site loads slowly, breaks after updates, or suddenly starts redirecting visitors to spam pages. WordPress isn't the problem — the setup is.",
+        "I rebuild or repair WordPress the lean way: a light theme, only essential plugins, compressed images, caching, and hosting in your own account. For exporters and B2B suppliers, I add proper product/specification pages with RFQ forms so buyers from Delhi, Mumbai or abroad can enquire directly.",
+        "If your site is mostly fixed pages and speed matters more than weekly posting, I'll honestly tell you a Next.js site may serve you better. I build both, so the recommendation is about your business, not my convenience.",
+      ],
+      bullets: [
+        "Speed-up and clean-up of existing WordPress sites",
+        "WooCommerce for small product catalogues and spare-parts stores",
+        "Hindi + English content setup for local audiences",
+        "WordPress to Next.js migration without losing Google rankings",
+      ],
+    },
+    faqs: [
+      {
+        question: "How much does a WordPress website cost in Kanpur?",
+        answer:
+          "A custom WordPress business website usually costs ₹25,000–₹60,000 depending on pages and features. Repairing or speeding up an existing WordPress site is quoted separately after a free check.",
+      },
+      {
+        question: "Can you fix a hacked or very slow WordPress site?",
+        answer:
+          "Yes. I remove malware and unknown admin users, update WordPress, themes and plugins, clean up heavy plugins and images, and set up security and backups so it doesn't happen again.",
+      },
+      {
+        question: "Can our office staff update the website?",
+        answer:
+          "Yes. I set up simple editing for pages, products and notices and give a short training video, so changing a phone number or adding a result doesn't need a developer.",
+      },
+      {
+        question: "Can you build the site in Hindi and English?",
+        answer:
+          "Yes. WordPress can run a bilingual site so customers can read in Hindi or English, which helps for schools, coaching institutes and local retail.",
+      },
+    ],
+    whatsappMessage:
+      "Hi Navnit, I'm from Kanpur and need help with a WordPress website.",
+  },
+  {
+    citySlug: "kanpur",
+    slug: "web-application-development",
+    kind: "web-app",
+    navLabel: "Web App, React & Next.js Development",
+    globalServiceSlug: "web-application-development",
+    seoTitle: "Web Application Developer in Kanpur | Custom Software, React & Next.js",
+    metaDescription:
+      "Kanpur web application developer for factories, exporters, coaching institutes and startups: custom software, ERP-style dashboards, dealer portals, React/Next.js and SaaS builds.",
+    h1: "Web Application & Custom Software Developer in Kanpur",
+    primaryKeyword: "kanpur web application developer",
+    secondaryKeywords: [
+      "custom software development in kanpur",
+      "kanpur react developer",
+      "kanpur next js developer",
+      "kanpur full stack developer",
+      "kanpur saas developer",
+    ],
+    heroLead:
+      "Still running orders, stock and dealers on Excel and WhatsApp? I build web apps for Kanpur businesses — order and inventory dashboards, dealer and distributor portals, coaching management systems and SaaS products — with React, Next.js and Node.js. You work directly with the developer.",
+    priceLabel: "₹1,50,000+",
+    timeline: "Depends on features (usually 6–12 weeks)",
+    audiences: [
+      {
+        title: "Manufacturers & exporters",
+        text: "Track orders, production status, dispatch and dealer payments in one dashboard instead of five spreadsheets and a WhatsApp group.",
+      },
+      {
+        title: "Coaching & education",
+        text: "Student logins, fee tracking, test series and results for Kakadeo institutes — built around how your batches actually run.",
+      },
+      {
+        title: "Startups & product teams",
+        text: "Need a first version (MVP) or a freelance React / Next.js developer to add features to an existing product? I can help with either.",
+      },
+    ],
+    included: [
+      "Planning session that turns your process into clear screens and features",
+      "Separate logins for owners, staff, dealers or students",
+      "PostgreSQL database designed to grow with your business",
+      "Reports, Excel exports and simple charts",
+      "Payment, SMS, email or WhatsApp integrations where needed",
+      "Preview link so you test each feature as it's built",
+      "Hosting set up in your company's own cloud account",
+      "Full source code handed over — no lock-in",
+    ],
+    localSection: {
+      heading: "Custom software for Kanpur businesses — without an expensive IT company",
+      paragraphs: [
+        "Kanpur's leather, textile, plastics and engineering units often outgrow Tally plus spreadsheets long before they can justify a big ERP. What they need is a focused tool: who ordered what, what's in production, what's been dispatched, and who still owes money. A custom web app does exactly that — and nothing you don't need.",
+        "As a freelance full-stack developer serving Kanpur, I build the whole system myself: the screens your team uses (React / Next.js), the server and database behind them (Node.js, PostgreSQL), and the hosting. One person, one point of contact, and the code belongs to you.",
+        "When comparing custom software development companies in Kanpur, ask two questions: who will actually write the code, and who owns it afterwards? With me, I write it and you own it — every line, in your GitHub account.",
+      ],
+      bullets: [
+        "Dealer / distributor portals with order placement and ledgers",
+        "Production, inventory and dispatch tracking dashboards",
+        "Coaching and school management: attendance, fees, tests, results",
+        "SaaS products with subscriptions and multiple customer accounts",
+      ],
+    },
+    faqs: [
+      {
+        question: "How much does custom software or a web app cost in Kanpur?",
+        answer:
+          "Custom web apps usually start around ₹1,50,000. The price depends on user types, screens and integrations. I recommend starting with a focused first version and adding features once your team uses it.",
+      },
+      {
+        question: "Can you connect the app with Tally or our existing Excel data?",
+        answer:
+          "Yes. Existing Excel data can be imported, and Tally data can be synced through exports or Tally's integration options, depending on your setup. We confirm the approach in the planning stage.",
+      },
+      {
+        question: "Do you work as a freelance React or Next.js developer on existing projects?",
+        answer:
+          "Yes. I can join an existing product to build features, fix bugs or improve speed, on a fixed scope or monthly arrangement.",
+      },
+      {
+        question: "Who owns the code?",
+        answer:
+          "You do. Code is stored in your company's GitHub account and the app runs on hosting in your name.",
+      },
+    ],
+    whatsappMessage:
+      "Hi Navnit, I'm from Kanpur and want to discuss a web app / custom software project.",
+  },
 
   /* ================================================================ */
   /* FARIDABAD                                                         */

@@ -50,6 +50,8 @@ export const footerColumns = {
     { label: "Website Developer in Lucknow", href: "/locations/lucknow" },
     { label: "Website Developer in Gorakhpur", href: "/locations/gorakhpur" },
     { label: "Website Developer in Kanpur", href: "/locations/kanpur" },
+    { label: "Website Developer in Varanasi", href: "/locations/varanasi" },
+    { label: "Website Developer in Prayagraj", href: "/locations/prayagraj" },
     { label: "Website Developer in Faridabad", href: "/locations/faridabad" },
   ],
   legal: [
